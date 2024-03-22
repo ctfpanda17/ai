@@ -3,11 +3,12 @@ x=0
 y=0
 z=0
 
-for y in np.arange(40, 1, -1):
-    for x in np.arange(40, 1, -1):
-        if 0.32*x+0.22*y>=8 and 0.11*x+0.09*y>=3 and 0.15*x+0.10*y>=4:
-            min=35*x+25*y
-            print(x,y)
-print(min)
+for z in np.arange(0, 20, 0.1):
+    for x in np.arange(0, 20, 0.1):
+        for y in np.arange(0, 20, 0.1):
+            if x+y<=8 and 2*x+z<=9 and 2*z+y<=4:
+                max=3*x+2*y+5*z
+                print(x,y,z)
+print(max)
 
         
